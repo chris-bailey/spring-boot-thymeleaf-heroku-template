@@ -43,7 +43,7 @@ Create a new application on Heroku
 $ heroku create
 ```
 
-Rename your application if you like  
+Rename your application if interested  
 ``` 
 $ heroku apps:rename new-name
 ```
