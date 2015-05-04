@@ -140,6 +140,22 @@ Here are the steps for converting the template so that it is utilizing a local P
 9.	`$ mvn spring-boot:run`
 10.	Open up the `sample` database and verify that the following two Liquibase tables have been generated:  `databasechangelog` & `databasechangeloglock`.
 
+###Setting the Logging Level###
+The logging level is set in the `src/main/resources/logback.xml` configuration file.  
+
+In order of most verbose to least verbose, the logging levels available are as follows: TRACE, DEBUG, INFO, WARN, ERROR
+
+For example, the following logging levels can be modified to INFO or WARN when moving to Production if you are receiving more information than you find necessary.
+
+```
+<root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+</root>
+    
+<logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
+```
+
+
 ###Special Thanks###
 A big thank you to [Julien Dubois](http://www.julien-dubois.com/) and the [JHipster](https://jhipster.github.io/) project for leading the way in the rapid development of Spring applications, as well as for part of the foundation for this template.  JHipster is a Yeoman generator used to create Spring + AngularJS projects, with full hot reload of Java and JavaScript code.
 
