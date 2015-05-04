@@ -107,17 +107,17 @@ Modify the `DatabaseConfiguration.java` class:
 ```
 @EnableJpaRepositories("*com.chrisbaileydeveloper.myapp.repository")
 ```
-<br/>  
+<br/>
 Modify the `src/main/resources/logback.xml` file:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
-<br/>  
+<br/>
 Modify the `src/test/resources/logback-test.xml` file:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
-<br/>  
+<br/>
 Modify the `pom.xml`<br/>
 `<referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?...</referenceUrl>`
 
