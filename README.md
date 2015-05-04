@@ -20,7 +20,7 @@ Here is the [Spring Boot + Thymeleaf + Heroku Template](https://spring-boot-thym
 ###Suggested Usage###
 Utilize [JHipster](https://jhipster.github.io/) to rapidly generate entities and Liquibase database changelogs that can then be transferred into this template.  
 
-Entity classes can be transferred into this template from JHipster's domain package.  Liquibase changelogs can be transferred from JHipster's src/main/resources/config/liquibase folder.  
+Entity classes can be transferred from JHipster's `domain` package.  Liquibase changelogs can be transferred from JHipster's `src/main/resources/config/liquibase` folder.  
 
 This template has been kept as <i>lean</i> as possible so that it can deploy successfully to Heroku without timing out while using a Heroku account with one allocated dyno.  
 
@@ -90,49 +90,44 @@ $ git push heroku master
 ```
 
 ###Template Customizations###
-When renaming the template packages, also note that there are few locations that should also be modified.
+When renaming the template packages, also note that there are a few locations that should also be modified.
 
-`com.chrisbaileydeveloper.myapp.config/DatabaseConfiguration.java`
-Modify the following line:
+Modify the `DatabaseConfiguration.java` class:
 ```
 @EnableJpaRepositories("*com.chrisbaileydeveloper.myapp.repository")
 ```
 
-`src/main/resources/logback.xml`  
-Modify the following line: 
+Modify the `src/main/resources/logback.xml` file:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
 
-`src/test/resources/logback-test.xml`  
-Modify the following line:
+Modify the `src/test/resources/logback-test.xml` file:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
 
-`pom.xml`
-Modify Liquibase plugin's `<referenceUrl>` to match your package name.
-                    `<referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?...</referenceUrl>`
+Modify the `pom.xml`                  `<referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?...</referenceUrl>`
 
 
 
 ###Local Database Selection###
 An embedded H2 database is the default local development database for this template so that it can be run from the command line without any modifications.  
 
-However, I would recommend using a PostgreSQL database for local development instead of the H2 database that has been packaged with this template.  Heroku is using a PostgreSQL database, so if something breaks in your local PostgreSQL database then you can fix it before deploying to Heroku.  
+I would recommend using a PostgreSQL database for local development since Heroku is utilizing a PostgreSQL database in Production.  This will enable you to catch database errors locally before they are deployed to Heroku where they are much more difficult to troubleshoot.
 
 Here are the steps for converting the template so that it is utilizing a local PostgreSQL database in development.  
 
 1.	Install PostgreSQL on your system and make sure the PostgreSQL service is running.
-2.	Create a new database called `sample`.
+2.	Create a new database called `sample`, or any database name of your choosing.
 3.	Set the owner of the new `sample` database to `postgres`.
-4.	Navigate to the following directory: `src/main/resources/config`
+4.	Navigate to the following project directory: `src/main/resources/config`
 5.	Rename `application-dev.yml` to `application-dev (H2).yml`
 6.	Rename `application-dev (PostgreSQL).yml` to `application-dev.yml`.
 7.	Open up the new `application-dev.yml` and modify the password field so that it holds your postgres user password.
 8.	`$ mvn clean install`
 9.	`$ mvn spring-boot:run`
-10.	Open up the `sample` database and check to make sure that your Liquibase tables have been generated (`databasechangelog` & `databasechangeloglock`).
+10.	Open up the `sample` database and verify that the following two Liquibase tables have been generated:  `databasechangelog` & `databasechangeloglock`.
 
 ###Special Thanks###
 A big thank you to [Julien Dubois](http://www.julien-dubois.com/) and the [JHipster](https://jhipster.github.io/) project for leading the way in the rapid development of Spring applications, as well as for part of the foundation for this template.  JHipster is a Yeoman generator used to create Spring + AngularJS projects, with full hot reload of Java and JavaScript code.
