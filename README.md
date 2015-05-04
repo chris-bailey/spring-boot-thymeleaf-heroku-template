@@ -118,7 +118,7 @@ Modify the `src/test/resources/logback-test.xml` file:
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
 <br/>
-Modify the `pom.xml`<br/>
+Modify the `pom.xml`:  
 `<referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?...</referenceUrl>`
 
 
