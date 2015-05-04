@@ -40,7 +40,7 @@ The application can also be deployed by running the `Application.java` class.
 ###Deploying to Heroku###
 <i>The following steps require that the [Heroku Toolbelt](https://toolbelt.heroku.com/) has been installed locally and that a Heroku account has been created.</i>
 
-Navigate to the project directory on the command line.
+Navigate to the project directory on the command line
 
 Create a new application on Heroku  
 ```
