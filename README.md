@@ -40,7 +40,14 @@ The application can also be deployed by running the `Application.java` class.
 ###Deploying to Heroku###
 <i>The following steps require that the [Heroku Toolbelt](https://toolbelt.heroku.com/) has been installed locally and that a Heroku account has been created.</i>
 
-Navigate to the project directory on the command line
+Navigate to the project directory on the command line.
+
+Before creating your Heroku application, make sure that there is a Git repository associated with the project.   
+```
+$ git status
+```  
+
+If a Git repository is not associated with the project, then create one before continuing. 
 
 Create a new application on Heroku  
 ```
@@ -86,8 +93,8 @@ In order to manually unlock the database do the following:
 
 1. Modify the database to the state it was in before the changelogs.  For example, if your changelog added a table called `T_Employee` then remove the `T_Employee` table from the database before attempting to redeploy your application to Heroku.
 
-###Updating your application###
-After making changes to your application, and updating your Git repository with those changes, you can push those changes to Heroku as follows:  
+###Updating your Heroku application###
+After making changes to your project, and updating your Git repository with those changes, you can push those changes to Heroku as follows:  
  
 ```
 $ git push heroku master
