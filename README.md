@@ -38,22 +38,26 @@ Navigate to [http://localhost:8080](http://localhost:8080).
 The application can also be deployed by running the `Application.java` class.
 
 ###Deploying to Heroku###
+<i>The following steps require that the [Heroku Toolbelt](https://toolbelt.heroku.com/) has been installed locally and that a Heroku account has been created.</i>
+
+Navigate to the project directory on the command line.
+
 Create a new application on Heroku  
 ```
 $ heroku create
 ```
 
-Rename your application if interested  
+Rename your Heroku application if interested  
 ``` 
 $ heroku apps:rename new-name
 ```
 
-Add a PostgreSQL database to your application  
+Add a PostgreSQL database to your Heroku application  
 ```
 $ heroku addons:add heroku-postgresql
 ```
 
-Deploy application to Heroku  
+Deploy project to Heroku  
 ```
 $ git push heroku master
 ```
