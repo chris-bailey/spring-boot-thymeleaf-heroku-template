@@ -130,7 +130,7 @@ I would recommend using a PostgreSQL database for local development since Heroku
 Here are the steps for converting the template so that it is utilizing a local PostgreSQL database in development.  
 
 1.	Install PostgreSQL on your system and make sure the PostgreSQL service is running.
-2.	Create a new database called `sample`, or any database name of your choosing.
+2.	Create a new database called `sample`, or any other database name of your choosing.
 3.	Set the owner of the new `sample` database to `postgres`.
 4.	Navigate to the following project directory: `src/main/resources/config`
 5.	Rename `application-dev.yml` to `application-dev (H2).yml`
@@ -162,5 +162,6 @@ A big thank you to [Julien Dubois](http://www.julien-dubois.com/) and the [JHips
 Also, thank you to Rafal Borowiec's for his impressive [spring-mvc-quickstart-archetype](https://github.com/kolorobot/spring-mvc-quickstart-archetype) project.
 
 
-
+### Author ###
+[Chris Bailey](http://www.chrisbaileydeveloper.com)
 
