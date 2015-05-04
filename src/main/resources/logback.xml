@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>[%p] %c - %m%n</Pattern>
+        </encoder>
+    </appender>
+    
+	<root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+    
+    <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
+
+    <logger name="javax.activation" level="WARN"/>
+    <logger name="javax.mail" level="WARN"/>
+    <logger name="javax.xml.bind" level="WARN"/>
+    <logger name="ch.qos.logback" level="WARN"/>
+    <logger name="com.ryantenney" level="WARN"/>
+    <logger name="com.sun.xml.internal.bind" level="WARN"/>
+    <logger name="com.zaxxer" level="WARN"/>
+    <logger name="io.undertow" level="WARN"/>
+    <logger name="net.sf.ehcache" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
+    <logger name="org.bson" level="WARN"/>
+    <logger name="org.hibernate.validator" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.web" level="WARN"/>
+    <logger name="org.springframework.security" level="WARN"/>
+    <logger name="org.springframework.cache" level="WARN"/>
+    <logger name="org.thymeleaf" level="WARN"/>
+    <logger name="org.xnio" level="WARN"/>
+    <logger name="liquibase" level="WARN"/>
+    <logger name="sun.rmi.transport" level="WARN"/>
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+    
+</configuration>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Bootstrap 3 -->
+<link href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+<link href="../../static/css/bootstrap-theme.min.css" th:href="@{/css/bootstrap-theme.min.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+	<div th:fragment="footer">
+		<hr/>
+		<div id="userinfo">
+			<div th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}
+		           OR ${#authorization.expression('hasRole(''ROLE_USER'')')}">
+				<span th:text="#{label_welcome} + ', ' + ${#authentication.name}">Welcome, Bob</span> 
+			</div>
+		</div>
+		
+		<div>
+			<a href="list.html" th:href="@{/}" th:text="#{home_text}">Home</a> | <a href="list.html"
+				th:href="@{?lang=en}" th:text="#{label_en_CA}">English</a> | <a href="list.html"
+				th:href="@{?lang=fr}" th:text="#{label_fr_CA}">French</a>
+		</div>
+		
+		
+		<!-- JavaScript Files -->
+		<!-- jQuery -->
+		<script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+		
+		<!-- Bootstrap 3 -->
+		<script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Bootstrap 3 -->
+<link href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+<link href="../../static/css/bootstrap-theme.min.css" th:href="@{/css/bootstrap-theme.min.css}" rel="stylesheet" media="screen" />
+
+</head>
+<body>
+	<div th:fragment="header">
+    <nav role="navigation" class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" th:href="@{/}" class="navbar-brand" th:text="#{application_name}">Application Demo</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#" th:href="@{/}" th:text="#{nav_home}">Home</a></li>
+                <li><a href="#about" th:text="#{nav_about}">About</a></li>
+                <li><a href="#contact" th:text="#{nav_contact}">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                    <a href="/signin" th:href="@{/signin}" th:text="#{nav_signin}">Sign in</a>
+                </li>
+                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();" th:text="#{label_logout}">Logout</a>
+                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

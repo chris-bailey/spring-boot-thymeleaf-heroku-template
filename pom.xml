@@ -1,0 +1,314 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.2.RELEASE</version>
+		 <relativePath />
+	</parent>
+
+	<groupId>com.chrisbaileydeveloper</groupId>
+	<artifactId>spring-boot-thymeleaf-heroku-template</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
+    
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<liquibase-hibernate4.version>3.5</liquibase-hibernate4.version>
+        <liquibase-slf4j.version>1.2.1</liquibase-slf4j.version>
+        <javax.inject.version>1</javax.inject.version>
+        <joda-time-hibernate.version>1.3</joda-time-hibernate.version>
+		<commons-io.version>2.4</commons-io.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <usertype-core.version>3.2.0.GA</usertype-core.version>
+        <assertj-core.version>1.0.0m1</assertj-core.version>
+        <jodatime-thymeleaf.version>1.3</jodatime-thymeleaf.version>
+        <thymeleaf-extras.version>2.1.2.RELEASE</thymeleaf-extras.version>
+        
+		<!-- Spring Boot uses java.version to select Java version -->
+        <java.version>1.8</java.version>
+        
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Thymeleaf -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		
+		<!-- Spring Security -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+		<!-- Liquibase -->
+		<dependency>
+            <groupId>com.mattbertolini</groupId>
+            <artifactId>liquibase-slf4j</artifactId>
+            <version>${liquibase-slf4j.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jetty-servlet</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <!-- Joiner -->
+        <dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>r05</version>
+		</dependency>
+        
+        <!-- Dependency Injection for Java -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>${javax.inject.version}</version>
+        </dependency>
+        
+        <!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+        <!-- Joda Time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time-hibernate</artifactId>
+            <version>${joda-time-hibernate.version}</version>
+        </dependency>
+        
+        <!-- Commons -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        
+        <!-- Jadira -->
+        <dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifactId>usertype.core</artifactId>
+            <version>${usertype-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-hibernate4</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP-java6</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.3-1102-jdbc41</version>
+		</dependency>
+		
+		<!-- Logging -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core-java8</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+		
+		<!-- H2 Database -->
+		<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+		
+		<!-- Joda Time to Thymeleaf Converter (Thymeleaf Dialect)-->
+		<!-- https://github.com/gcwilliams/jodatime-thymeleaf-dialect -->
+		<dependency>
+			<groupId>uk.co.gcwilliams</groupId>
+			<artifactId>jodatime-thymeleaf-dialect</artifactId>
+			<version>${jodatime-thymeleaf.version}</version>
+		</dependency>
+		
+		<!-- Thymeleaf extras for Spring Security (Thymeleaf Dialect)-->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+			<version>${thymeleaf-extras.version}</version>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+		<plugins>
+			<!-- Liquibase plugin -->
+			<plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liquibase.version}</version>
+                <configuration>
+                    <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
+                    <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://localhost/sample</url>
+                    <defaultSchemaName />
+                    <username>postgres</username>
+                    <password />
+                    <referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect</referenceUrl>
+                    <verbose>true</verbose>
+                    <logging>debug</logging>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                        <version>3.18.2-GA</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.liquibase.ext</groupId>
+                        <artifactId>liquibase-hibernate4</artifactId>
+                        <version>${liquibase-hibernate4.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                        <version>${project.parent.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+				<plugins>
+					<!-- Spring Boot Maven Plugin -->
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<configuration>
+		                    <arguments>
+		                        <argument>--spring.profiles.active=dev</argument>
+		                    </arguments>
+		                </configuration>
+					</plugin>
+				</plugins>
+			</build>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <build>
+                <plugins>
+                	<!-- Spring Boot Maven Plugin -->
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <configuration>
+                            <arguments>
+                                <argument>--spring.profiles.active=prod</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles> 
+
+</project>
