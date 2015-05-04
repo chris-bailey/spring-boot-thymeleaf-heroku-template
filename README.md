@@ -1,8 +1,4 @@
 
-Project name: Spring Boot + Thymeleaf + Heroku Template
-Quick description: Spring Boot + Thymeleaf + Heroku Template for rapid development
-
-
 #Spring Boot + Thymeleaf + Heroku Template#
 This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.  
 
@@ -14,6 +10,12 @@ This template has been designed to be used in conjunction with [JHipster](https:
 - Database (Liquibase/PostgreSQL/H2 embedded/HikariCP)  
 - Testing (JUnit/Mockito/MockMVC/AssertJ/Hamcrest)  
 - Java 8, Spring Security 3.2, Maven 3, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc
+
+###Live Demo###
+Be aware that the template is currently running on a free Heroku account.  If it hasn't been accessed in 30 minutes, then the first request will take up to 30 seconds.  Please be patient with the first request. Subsequent requests will be normal.  
+
+Here is the [Spring Boot + Thymeleaf + Heroku Template](https://spring-boot-thymeleaf-heroku.herokuapp.com/) running on Heroku.
+
 
 ###Suggested Usage###
 Utilize [JHipster](https://jhipster.github.io/) to rapidly generate entities and Liquibase database changelogs that can then be transferred into this template.  
