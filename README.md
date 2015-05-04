@@ -101,7 +101,7 @@ $ git push heroku master
 ```
 
 ###Template Customizations###
-When renaming the template packages, also note that there are a few locations that should also be modified.
+In addition to renaming the template packages, also note that there are a few specific locations that should also be modified.
 
 Modify the `DatabaseConfiguration.java` class:
 ```
