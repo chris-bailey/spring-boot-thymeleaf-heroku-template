@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -28,10 +29,10 @@
                 <li><a href="#contact" th:text="#{nav_contact}">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                <li sec:authorize="!isAuthenticated()">
                     <a href="/signin" th:href="@{/signin}" th:text="#{nav_signin}">Sign in</a>
                 </li>
-                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                <li sec:authorize="isAuthenticated()">
                     <a href="/logout" th:href="@{#}" onclick="$('#form').submit();" th:text="#{label_logout}">Logout</a>
                     <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
                 </li>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,20 +37,20 @@
 			<li>JPA 2.0 (Spring Data JPA/Hibernate)</li>
 			<li>Database (Liquibase/PostgreSQL/H2 embedded/HikariCP)</li>
 			<li>Testing (JUnit/Mockito/MockMVC/AssertJ/Hamcrest)</li>
-			<li>Java 8, Spring Security 3.2, Maven 3, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc</li>
+			<li>Java 8, Spring Security 3.2, Maven 3, SLF4J, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc</li>
 		</ul>
 		<br/>
 		
 		<h3 th:text="#{label_credential_header}">Current Credientials</h3>
-		<div th:if="${#authorization.expression('hasRole(''ROLE_ANONYMOUS'')')}">
+		<div sec:authorize="hasRole('ROLE_ANONYMOUS')">
 			<p th:utext="#{message_anonymous}">You are currently signed in as an anonymous user.</p>
 		</div>
 
-		<div th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}" >
+		<div sec:authorize="hasRole('ROLE_USER')" >
 			<p th:utext="#{message_user}">You are currently signed in as a user.</p>
 		</div>
 
-		<div th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}" >
+		<div sec:authorize="hasRole('ROLE_ADMIN')">
 			<p th:utext="#{message_admin}">You are currently signed in as the administrator.</p>
 		</div>
 
