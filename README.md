@@ -134,7 +134,7 @@ Modify the `pom.xml`:
 ###Local Database Selection###
 An embedded H2 database is the default local development database for this template so that it can be run from the command line without any modifications.  
 
-I would recommend using a PostgreSQL database for local development since Heroku is utilizing a PostgreSQL database in Production.  This will enable you to catch database errors locally before they are deployed to Heroku where they are much more difficult to troubleshoot.
+I would recommend using a PostgreSQL database for local development since Heroku is utilizing a PostgreSQL database in Production.  This will enable you to catch database errors locally before they are deployed to Heroku where they are more complicated to troubleshoot.
 
 Here are the steps for converting the template so that it is utilizing a local PostgreSQL database in development.  
 
