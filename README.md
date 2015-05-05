@@ -100,6 +100,15 @@ After making changes to your project, and updating your Git repository with thos
 $ git push heroku master
 ```
 
+###Deploying to a new Heroku dyno###
+If for some reason you are interested in starting from scratch with a new Heroku application, you can do the following:    
+
+```  
+$ git remote rm heroku
+```  
+
+You can then start from scratch with the `heroku create` command.
+
 ###Template Customizations###
 In addition to the renaming of the template's packages, there are a few specific locations that should also be modified.  They are as follows:
 
