@@ -9,7 +9,7 @@ This template has been designed to be used in conjunction with [JHipster](https:
 - JPA 2.0 (Spring Data JPA/Hibernate)
 - Database (Liquibase/PostgreSQL/H2 embedded/HikariCP)  
 - Testing (JUnit/Mockito/MockMVC/AssertJ/Hamcrest)  
-- Java 8, Spring Security 3.2, Maven 3, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc
+- Java 8, Spring Security 3.2, Maven 3, SLF4J, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc
 
 ###Live Demo###
 Be aware that the template is currently running on a free Heroku account.  If it hasn't been accessed in 30 minutes, then the first request will take up to 30 seconds.  Please be patient with the first request. Subsequent requests will be normal.  
