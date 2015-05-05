@@ -101,7 +101,7 @@ $ git push heroku master
 ```
 
 ###Deploying to a new Heroku dyno###
-If for some reason you are interested in starting from scratch with a new Heroku application, you can do the following:    
+If for any reason you are interested in starting from scratch with a new Heroku application, you can do the following:    
 
 ```  
 $ git remote rm heroku
