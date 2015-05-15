@@ -1,6 +1,6 @@
 
 #Spring Boot + Thymeleaf + Heroku Template#
-This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.  
+This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.  The template's features have been fully documented in the following [blog post](http://chrisbaileydeveloper.com/spring-boot-thymeleaf-heroku-template/) on my website.
 
 ###Technology Stack###
 - Spring Boot, no-xml Spring MVC 4 web application for Servlet 3.0 environment
@@ -169,7 +169,6 @@ For example, the following logging levels can be modified to INFO or WARN when m
 A big thank you to [Julien Dubois](http://www.julien-dubois.com/) and the [JHipster](https://jhipster.github.io/) project for leading the way in the rapid development of Spring applications, as well as for part of the foundation for this template.  JHipster is a Yeoman generator used to create Spring + AngularJS projects, with full hot reload of Java and JavaScript code.
 
 Also, thank you to Rafal Borowiec's for his impressive [spring-mvc-quickstart-archetype](https://github.com/kolorobot/spring-mvc-quickstart-archetype) project.
-
 
 ### Author ###
 [Chris Bailey](http://www.chrisbaileydeveloper.com)
