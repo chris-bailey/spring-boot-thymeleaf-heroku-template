@@ -22,7 +22,7 @@ Utilize [JHipster](https://jhipster.github.io/) to rapidly generate entities and
 
 Entity classes can be transferred from JHipster's `domain` package.  Liquibase changelogs can be transferred from JHipster's `src/main/resources/config/liquibase` folder.  
 
-This template has been kept as <i>lean</i> as possible so that it can deploy successfully to Heroku without timing out while using a Heroku account with one allocated dyno.  
+This template has been kept as <i>lean</i> as possible so that it can deploy successfully to Heroku without timing out while using an Heroku account with one allocated dyno.  
 
 If interested in production-ready features, check out the [Spring Boot Actuator](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready) which will add many useful tools with very little effort.  Also, you can look at JHipster which is utilizing the [Metrics project](https://dropwizard.github.io/metrics/3.1.0/) as well as [Swagger](http://swagger.io/).
 
