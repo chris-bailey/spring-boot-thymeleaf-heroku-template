@@ -135,17 +135,17 @@ You can then start from scratch with the `heroku create` command.
 ###Template Customizations###
 In addition to the renaming of the template's packages, there are a few specific locations that should also be modified.  They are as follows:
 
-Modify the `DatabaseConfiguration.java` class:
+Modify the `DatabaseConfiguration.java` class so that the following line contains your package name:  
 ```
 @EnableJpaRepositories("*com.chrisbaileydeveloper.myapp.repository")
 ```
 <br/>
-Modify the `src/main/resources/logback.xml` file:  
+Modify the `src/main/resources/logback.xml` file so that the following line contains your package name:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
 <br/>
-Modify the `src/test/resources/logback-test.xml` file:  
+Modify the `src/test/resources/logback-test.xml` file so that the following line contains your package name:  
 ```
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
