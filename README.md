@@ -150,7 +150,7 @@ Modify the `src/test/resources/logback-test.xml` file so that the following line
 <logger name="com.chrisbaileydeveloper.myapp" level="DEBUG"/>
 ```
 <br/>
-Modify the `pom.xml`:  
+Modify the `pom.xml` file so that the following line contains your package name:  
 `<referenceUrl>hibernate:spring:com.chrisbaileydeveloper.myapp.domain?...</referenceUrl>`
 
 
