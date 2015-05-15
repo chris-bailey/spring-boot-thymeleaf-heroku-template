@@ -12,7 +12,7 @@ This template has been designed to be used in conjunction with [JHipster](https:
 - Java 8, Spring Security 3.2, Maven 3, SLF4J, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc
 
 ###Live Demo###
-Be aware that the template is currently running on a free Heroku account.  If it hasn't been accessed in 30 minutes, then the first request will take up to 30 seconds.  Please be patient with the first request. Subsequent requests will be normal.  
+Be aware that the template is currently running on a free Heroku account.  If it hasn't been accessed in 30 minutes, then the first request will take up to 60 seconds.  Please be patient with the first request. Subsequent requests will be normal.  
 
 Here is the [Spring Boot + Thymeleaf + Heroku Template](https://spring-boot-thymeleaf-heroku.herokuapp.com/) running on Heroku.
 
