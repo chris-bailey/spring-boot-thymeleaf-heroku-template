@@ -27,6 +27,29 @@ This template has been kept as <i>lean</i> as possible so that it can deploy suc
 If interested in production-ready features, check out the [Spring Boot Actuator](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready) which will add many useful tools with very little effort.  Also, you can look at JHipster which is utilizing the [Metrics project](https://dropwizard.github.io/metrics/3.1.0/) as well as [Swagger](http://swagger.io/).
 
 
+###JHipster Setup###
+While generating your [JHipster](https://jhipster.github.io/) application, select the following settings when prompted.  The selected settings will allow for the highest level of integration between JHipster and this template.
+
+Do you want to use Java 8?  
+**Yes (use Java 8)**  
+  
+Which \*type\* of authentication would you like to use?  
+**HTTP Session Authentication**  
+  
+Which \*type\* of database would you like to use?  
+**SQL (H2, MySQL, PostgreSQL)**  
+
+Which \*production\* database would you like to use?  
+**PostgreSQL**
+
+Which \*development\* database would you like to use?  
+**H2 in-memory**  
+
+Do you want to use Hibernate 2nd level cache?  
+**No**  
+
+Choose **Maven** as the build tool.
+
 ###Local Deployment###
 ```
 $ mvn clean install  
