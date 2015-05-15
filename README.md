@@ -61,7 +61,7 @@ $ heroku apps:rename new-name
 
 Add a PostgreSQL database to your Heroku application  
 ```
-$ heroku addons:add heroku-postgresql
+$ heroku addons:create heroku-postgresql
 ```
 
 Deploy project to Heroku  
