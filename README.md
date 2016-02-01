@@ -1,6 +1,6 @@
 
 #Spring Boot + Thymeleaf + Heroku Template#
-This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) **version 2.9.2** to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.  The template's features have been fully documented in the [Spring Boot + Thymeleaf + Heroku Template](http://chrisbaileydeveloper.com/projects/spring-boot-thymeleaf-heroku-template/) web page on my website.
+This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) **version 2.6.0** to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.  The template's features have been fully documented in the [Spring Boot + Thymeleaf + Heroku Template](http://chrisbaileydeveloper.com/projects/spring-boot-thymeleaf-heroku-template/) web page on my website.
 
 ###Technology Stack###
 - Spring Boot, no-xml Spring MVC 4 web application for Servlet 3.0 environment
@@ -18,7 +18,7 @@ Here is the [Spring Boot + Thymeleaf + Heroku Template](https://spring-boot-thym
 
 
 ###Suggested Usage###
-Utilize [JHipster](https://jhipster.github.io/) **version 2.9.2** to rapidly generate entities and Liquibase database changelogs that can then be transferred into this template.  
+Utilize [JHipster](https://jhipster.github.io/) **version 2.6.0** to rapidly generate entities and Liquibase database changelogs that can then be transferred into this template.  
 
 Entity classes can be transferred from JHipster's `domain` package.  Liquibase changelogs can be transferred from JHipster's `src/main/resources/config/liquibase` folder.  
 
@@ -28,10 +28,10 @@ If interested in production-ready features, check out the [Spring Boot Actuator]
 
 
 ###JHipster Setup###
-This template relies on [JHipster](https://jhipster.github.io/) **version 2.9.2**.  In order to install version 2.9.2 please run the following command at the command prompt during your JHipster installation: 
+This template relies on [JHipster](https://jhipster.github.io/) **version 2.6.0**.  In order to install version 2.6.0 please run the following command at the command prompt during your JHipster installation: 
 
 ```
-$ npm install -g generator-jhipster@2.9.2
+$ npm install -g generator-jhipster@2.6.0
 ```
 
 While generating your [JHipster](https://jhipster.github.io/) application, select the following settings when prompted.  The selected settings will allow for the highest level of integration between JHipster and this template.
