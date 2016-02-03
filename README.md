@@ -34,6 +34,14 @@ This template relies on [JHipster](https://jhipster.github.io/) **version 2.6.0*
 $ npm install -g generator-jhipster@2.6.0
 ```
 
+Note that if you have a newer version of JHipster, this will override it.  
+
+After the installation has completed, you can verify your JHipster version with the following command:
+
+```
+npm list -g --depth=0 | grep jhipster
+``` 
+
 While generating your [JHipster](https://jhipster.github.io/) application, select the following settings when prompted.  The selected settings will allow for the highest level of integration between JHipster and this template.
 
 Do you want to use Java 8?  
