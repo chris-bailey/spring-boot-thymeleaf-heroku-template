@@ -203,7 +203,7 @@ For example, the following logging levels can be modified to INFO or WARN when m
 ### Special Thanks
 A big thank you to [Julien Dubois](http://www.julien-dubois.com/) and the [JHipster](https://jhipster.github.io/) project for leading the way in the rapid development of Spring applications, as well as for part of the foundation for this template.  JHipster is a Yeoman generator used to create Spring + AngularJS projects, with full hot reload of Java and JavaScript code.
 
-Also, thank you to Rafal Borowiec's for his impressive [spring-mvc-quickstart-archetype](https://github.com/kolorobot/spring-mvc-quickstart-archetype) project.
+Also, thank you to Rafal Borowiec for his impressive [spring-mvc-quickstart-archetype](https://github.com/kolorobot/spring-mvc-quickstart-archetype) project.
 
 ### Author 
 Chris Bailey
