@@ -12,8 +12,6 @@ This template has been designed to be used in conjunction with [JHipster](https:
 - Testing (JUnit/Mockito/MockMVC/AssertJ/Hamcrest)  
 - Java 8, Spring Security 3.2, Maven 3, SLF4J, Logback, Bootstrap 3.3.4, jQuery 1.11.2, i18n, etc
 
-### Live Demo
-Be aware that this application is currently running on a free Heroku account.  If it hasn't been accessed in 30 minutes, then ***the first request will take up to 120 seconds***.  Note that the demo application might fail to load altogether if the Heroku servers are busy. 
 
 ### Suggested Usage
 Utilize [JHipster](https://jhipster.github.io/) **version 2.6.0** to rapidly generate entities and Liquibase database changelogs that can then be transferred into this template.  
