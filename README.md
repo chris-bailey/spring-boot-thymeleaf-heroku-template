@@ -1,7 +1,7 @@
 
 # Spring Boot + Thymeleaf + Heroku Template
 
-This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) **version 2.6.0** to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to Heroku.
+This template has been designed to be used in conjunction with [JHipster](https://jhipster.github.io/) **version 2.6.0** to enable rapid development of Spring Boot + Thymeleaf applications that are fully deployable to the Heroku cloud.
 
 ### Technology Stack
 - Spring Boot, no-xml Spring MVC 4 web application for Servlet 3.0 environment
